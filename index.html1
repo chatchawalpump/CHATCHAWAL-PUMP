@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chatchawal Pump</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+body {
+    font-family: 'Prompt', sans-serif;
+    margin: 0;
+    background: #f8fafc;
+    color: #1e293b;
+}
+
+/* NAVBAR */
+nav {
+    position: sticky;
+    top: 0;
+    background: rgba(0,0,0,0.85);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    z-index: 1000;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+/* HERO */
+.hero {
+    height: 90vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url('https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    text-align:center;
+}
+.hero h1 {
+    font-size: 48px;
+}
+.hero p {
+    font-size: 20px;
+}
+.cta {
+    margin-top:20px;
+    padding:15px 30px;
+    background:#00b4d8;
+    border:none;
+    font-size:18px;
+    color:white;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+/* SECTION */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* FEATURES */
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.feature {
+    width: 250px;
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* PRODUCTS */
+.products {
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+.card {
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 10px 20px rgba(0,0,0,0.1);
+}
+.card img {
+    width:100%;
+    border-radius:10px;
+}
+.price {
+    color:#0077b6;
+    font-size:20px;
+}
+.buy {
+    margin-top:10px;
+    display:inline-block;
+    padding:10px 20px;
+    background:#0077b6;
+    color:white;
+    border-radius:6px;
+    text-decoration:none;
+}
+
+/* TESTIMONIAL */
+.testimonial {
+    background:#e0f2fe;
+    padding:40px;
+    border-radius:10px;
+    max-width:600px;
+    margin:auto;
+}
+
+/* FOOTER */
+footer {
+    background:#020617;
+    color:white;
+    padding:20px;
+}
+
+/* LINE FLOAT */
+.line {
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#06c755;
+    color:white;
+    padding:15px;
+    border-radius:50%;
+    font-size:20px;
+    text-decoration:none;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div><strong>Chatchawal Pump</strong></div>
+    <div>
+        <a href="#">หน้าแรก</a>
+        <a href="#products">สินค้า</a>
+        <a href="#contact">ติดต่อ</a>
+    </div>
+</nav>
+
+<div class="hero">
+    <h1>ปั๊มน้ำคุณภาพสูง</h1>
+    <p>แรง ทน คุ้มค่า สำหรับทุกการใช้งาน</p>
+    <button class="cta" onclick="location.href='#products'">ดูสินค้า</button>
+</div>
+
+<section>
+    <h2>ทำไมต้องเลือกเรา?</h2>
+    <div class="features">
+        <div class="feature">💧 คุณภาพสูง</div>
+        <div class="feature">⚡ แรงดันดี</div>
+        <div class="feature">🛠 รับประกัน</div>
+    </div>
+</section>
+
+<section id="products">
+    <h2>สินค้าแนะนำ</h2>
+    <div class="products">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1565043666747-69f6646db940">
+            <h3>ปั๊มน้ำบ้าน</h3>
+            <p class="price">3,500 บาท</p>
+            <a class="buy" href="#">สั่งซื้อ</a>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789">
+            <h3>ปั๊มอุตสาหกรรม</h3>
+            <p class="price">7,900 บาท</p>
+            <a class="buy" href="#">สั่งซื้อ</a>
+        </div>
+
+    </div>
+</section>
+
+<section>
+    <h2>รีวิวลูกค้า</h2>
+    <div class="testimonial">
+        “ของดีมาก ใช้งานทน แรงดันน้ำดีขึ้นชัดเจน”
+    </div>
+</section>
+
+<section id="contact">
+    <h2>ติดต่อเรา</h2>
+    <p>📞 08X-XXX-XXXX</p>
+    <p>📧 your@email.com</p>
+</section>
+
+<a href="https://line.me" class="line">LINE</a>
+
+<footer>
+    © 2026 Chatchawal Pump
+</footer>
+
+</body>
+</html>
