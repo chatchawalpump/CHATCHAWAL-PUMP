@@ -1,104 +1,185 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chatchawal Pump</title>
-    <style>
-        body {
-            font-family: Arial;
-            margin: 0;
-            background: #f4f4f4;
-        }
-        header {
-            background: #0077b6;
-            color: white;
-            padding: 15px;
-            text-align: center;
-        }
-        nav {
-            background: #023e8a;
-            padding: 10px;
-            text-align: center;
-        }
-        nav a {
-            color: white;
-            margin: 10px;
-            text-decoration: none;
-        }
-        .container {
-            padding: 20px;
-        }
-        .product {
-            background: white;
-            padding: 15px;
-            margin: 10px 0;
-            border-radius: 10px;
-        }
-        button {
-            background: #0096c7;
-            color: white;
-            border: none;
-            padding: 10px;
-            cursor: pointer;
-        }
-        footer {
-            background: #03045e;
-            color: white;
-            text-align: center;
-            padding: 10px;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chatchawal Pump</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
+
+<style>
+body {
+    font-family: 'Prompt', sans-serif;
+    margin: 0;
+    background: #f5f7fa;
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(90deg, #003566, #0077b6);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* NAV */
+nav {
+    display: flex;
+    justify-content: center;
+    background: #001d3d;
+    flex-wrap: wrap;
+}
+nav a {
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+}
+nav a:hover {
+    background: #0077b6;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background: url('https://images.unsplash.com/photo-1581092918056-0c4c3acd3789') no-repeat center/cover;
+    color: white;
+}
+.hero h1 {
+    font-size: 36px;
+}
+.hero button {
+    padding: 15px 25px;
+    background: #00b4d8;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+/* SECTION */
+.container {
+    padding: 40px 20px;
+}
+
+/* PRODUCT CARD */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.card h3 {
+    margin: 10px 0;
+}
+
+.price {
+    color: #0077b6;
+    font-size: 20px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #0077b6;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+/* CONTACT FLOAT */
+.line-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #06c755;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+/* FOOTER */
+footer {
+    background: #001d3d;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+</style>
+
 </head>
+
 <body>
 
 <header>
     <h1>Chatchawal Pump</h1>
-    <p>จำหน่ายปั๊มน้ำคุณภาพสูง</p>
+    <p>ผู้เชี่ยวชาญด้านปั๊มน้ำ ครบวงจร</p>
 </header>
 
 <nav>
-    <a href="#home">หน้าแรก</a>
+    <a href="#">หน้าแรก</a>
     <a href="#products">สินค้า</a>
     <a href="#about">เกี่ยวกับเรา</a>
     <a href="#contact">ติดต่อ</a>
 </nav>
 
-<div class="container" id="home">
-    <h2>ยินดีต้อนรับ</h2>
-    <p>เราจำหน่ายปั๊มน้ำทุกประเภท เช่น ปั๊มน้ำบ้าน ปั๊มอุตสาหกรรม และปั๊มแรงดันสูง</p>
-</div>
+<section class="hero">
+    <h1>ปั๊มน้ำคุณภาพ สำหรับบ้านและอุตสาหกรรม</h1>
+    <p>ติดตั้งง่าย ทนทาน รับประกัน</p>
+    <button onclick="location.href='#products'">ดูสินค้า</button>
+</section>
 
 <div class="container" id="products">
-    <h2>สินค้า</h2>
+    <h2>สินค้าแนะนำ</h2>
 
-    <div class="product">
-        <h3>ปั๊มน้ำอัตโนมัติ</h3>
-        <p>เหมาะสำหรับบ้านพักอาศัย</p>
-        <p><strong>ราคา: 3,500 บาท</strong></p>
-        <button onclick="alert('ติดต่อเพื่อสั่งซื้อ')">สั่งซื้อ</button>
+    <div class="products">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1565043666747-69f6646db940">
+            <h3>ปั๊มน้ำอัตโนมัติ</h3>
+            <p class="price">3,500 บาท</p>
+            <a href="#" class="btn">สั่งซื้อ</a>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc">
+            <h3>ปั๊มน้ำแรงดันสูง</h3>
+            <p class="price">7,900 บาท</p>
+            <a href="#" class="btn">สั่งซื้อ</a>
+        </div>
+
     </div>
-
-    <div class="product">
-        <h3>ปั๊มน้ำแรงดันสูง</h3>
-        <p>เหมาะสำหรับโรงงาน</p>
-        <p><strong>ราคา: 7,900 บาท</strong></p>
-        <button onclick="alert('ติดต่อเพื่อสั่งซื้อ')">สั่งซื้อ</button>
-    </div>
-
 </div>
 
 <div class="container" id="about">
     <h2>เกี่ยวกับเรา</h2>
-    <p>Chatchawal Pump จำหน่ายปั๊มน้ำคุณภาพ พร้อมบริการติดตั้งและให้คำปรึกษา</p>
+    <p>Chatchawal Pump จำหน่ายปั๊มน้ำคุณภาพ พร้อมบริการติดตั้งและให้คำปรึกษาโดยผู้เชี่ยวชาญ</p>
 </div>
 
 <div class="container" id="contact">
-    <h2>ติดต่อ</h2>
-    <p>โทร: 08X-XXX-XXXX</p>
-    <p>Line: @yourline</p>
-    <p>Email: your@email.com</p>
+    <h2>ติดต่อเรา</h2>
+    <p>📞 08X-XXX-XXXX</p>
+    <p>📧 your@email.com</p>
 </div>
+
+<a href="https://line.me" class="line-btn">LINE</a>
 
 <footer>
     <p>© 2026 Chatchawal Pump</p>
